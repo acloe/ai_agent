@@ -1,5 +1,6 @@
 from functions.get_files_info import *
 from functions.get_file_content import *
+from functions.write_file import *
 '''
 print("Result for current directory:")
 result1 = get_files_info("calculator", ".")
@@ -16,7 +17,6 @@ print(result3)
 print("Result for current directory:")
 result4 = get_files_info("calculator", "../")
 print(result4)
-'''
 
 print("Result for current directory:")
 result5 = get_file_content("calculator", "lorem.txt")
@@ -37,3 +37,15 @@ print(result8)
 print("File Content:")
 result9 = get_file_content("calculator", "pkg/does_not_exist.py")
 print(result9)
+'''
+print("File Content:")
+result10 = write_file("calculator", "lorem.txt", "wait, this isn't lorem ipsum")
+print(result10)
+
+print("File Content:")
+result11 = write_file("calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet")
+print(result11)
+
+print("File Content:")
+result12 = write_file("calculator", "/tmp/temp.txt", "this should not be allowed")
+print(result12)
